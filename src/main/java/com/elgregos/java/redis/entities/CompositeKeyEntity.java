@@ -6,19 +6,20 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class SimpleEntity implements BaseEntity {
+public class CompositeKeyEntity implements BaseEntity {
 
-	private static final long serialVersionUID = 4244751097030627290L;
+	private static final long serialVersionUID = 4621950803464175880L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
-	private String code;
+	private String firstCode;
+	private String secondCode;
 	private String label;
 
-	public String getCode() {
-		return code;
+	public String getFirstCode() {
+		return firstCode;
 	}
 
 	public Long getId() {
@@ -29,8 +30,12 @@ public class SimpleEntity implements BaseEntity {
 		return label;
 	}
 
-	public void setCode(String code) {
-		this.code = code;
+	public String getSecondCode() {
+		return secondCode;
+	}
+
+	public void setFirstCode(String firstCode) {
+		this.firstCode = firstCode;
 	}
 
 	public void setId(Long id) {
@@ -41,4 +46,7 @@ public class SimpleEntity implements BaseEntity {
 		this.label = label;
 	}
 
+	public void setSecondCode(String secondCode) {
+		this.secondCode = secondCode;
+	}
 }
