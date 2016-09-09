@@ -15,6 +15,7 @@ import org.springframework.cache.CacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ComponentScan.Filter;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.data.redis.cache.RedisCacheManager;
@@ -31,6 +32,7 @@ import com.zaxxer.hikari.HikariDataSource;
 @ComponentScan(basePackages = "com.elgregos.java.redis", excludeFilters = {
 		@Filter(type = FilterType.ASSIGNABLE_TYPE, classes = { Populate.class }) })
 @EnableJpaRepositories(basePackages = "com.elgregos.java.redis.entities")
+@EnableAspectJAutoProxy
 public class RedisApplication {
 
 	@Autowired

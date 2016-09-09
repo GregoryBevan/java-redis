@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.CacheManager;
 import org.springframework.stereotype.Service;
 
+import com.elgregos.java.redis.aspect.LogTime;
 import com.elgregos.java.redis.entities.SimpleEntity;
 import com.elgregos.java.redis.entities.repositories.SimpleEntityRepository;
 
@@ -18,6 +19,7 @@ public class SimpleEntityService {
 	@Autowired
 	private CacheManager cacheManager;
 
+	@LogTime
 	public List<SimpleEntity> getSimpleEntities() {
 		return repository.findAll();
 	}
