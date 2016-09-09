@@ -1,5 +1,6 @@
 package com.elgregos.java.redis.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,8 +18,15 @@ public class SimpleEntity implements BaseEntity {
 	private String code;
 	private String label;
 
+	@Column(columnDefinition = "TEXT")
+	private String description;
+
 	public String getCode() {
 		return code;
+	}
+
+	public String getDescription() {
+		return description;
 	}
 
 	public Long getId() {
@@ -31,6 +39,10 @@ public class SimpleEntity implements BaseEntity {
 
 	public void setCode(String code) {
 		this.code = code;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	public void setId(Long id) {

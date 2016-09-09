@@ -1,5 +1,6 @@
 package com.elgregos.java.redis.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,6 +19,13 @@ public class CompositeKeyEntity implements BaseEntity {
 	private String secondCode;
 	private String label;
 
+	@Column(columnDefinition = "TEXT")
+	private String description;
+
+	public String getDescription() {
+		return description;
+	}
+
 	public String getFirstCode() {
 		return firstCode;
 	}
@@ -32,6 +40,10 @@ public class CompositeKeyEntity implements BaseEntity {
 
 	public String getSecondCode() {
 		return secondCode;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	public void setFirstCode(String firstCode) {
