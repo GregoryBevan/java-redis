@@ -27,7 +27,7 @@ public class CompositeKeyEntityRestImpl {
 
 	@RequestMapping(method = RequestMethod.GET)
 	public List<CompositeKeyEntity> getAll() {
-		return service.getCompositeKeyEntities();
+		return service.getAllFromCache();
 	}
 
 }

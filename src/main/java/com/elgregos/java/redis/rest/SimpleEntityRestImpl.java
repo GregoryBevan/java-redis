@@ -30,7 +30,7 @@ public class SimpleEntityRestImpl {
 
 	@RequestMapping(method = RequestMethod.GET, path = "/all")
 	public List<SimpleEntity> getAllFromCache() {
-		return service.getSimpleEntitiesFromCache();
+		return service.getAllFromCache();
 	}
 
 }

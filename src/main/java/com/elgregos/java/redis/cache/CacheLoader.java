@@ -19,9 +19,8 @@ public class CacheLoader {
 
 	@LogTime
 	public void loadCache() {
-		// simpleEntityCache.loadCache();
-		// simpleEntityCache.loadListCache();
-		// compositeKeyEntityCache.loadCache();
+		simpleEntityCache.loadCache();
+		compositeKeyEntityCache.loadCache();
 		hierarchyValueCache.loadCache();
 	}
 

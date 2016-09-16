@@ -77,10 +77,12 @@ public class HierarchyValueCache {
 
 	private HashOperations<String, Long, HierarchyValue> opsForHash;
 
+	@LogTime
 	public List<HierarchyValue> getAll() {
-		return opsForHash.entries(HIERARCHY_VALUES).values().stream().collect(Collectors.toList());
+		return opsForHash.values(HIERARCHY_VALUES);
 	}
 
+	@LogTime
 	public HierarchyValue getById(Long id) {
 		return opsForHash.get(HIERARCHY_VALUES, id);
 	}
