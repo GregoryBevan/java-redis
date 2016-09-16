@@ -18,7 +18,7 @@ public class CompositeKeyEntityPopulate {
 	public void populate() {
 		final List<CompositeKeyEntity> entities = new ArrayList<>();
 		for (char c = 'A'; c <= 'Z'; c++) {
-			for (int i = 0; i < 10000; i++) {
+			for (int i = 0; i < 100; i++) {
 				final CompositeKeyEntity entity = new CompositeKeyEntity();
 				entity.setFirstCode(String.valueOf(c));
 				entity.setSecondCode(String.valueOf(i));

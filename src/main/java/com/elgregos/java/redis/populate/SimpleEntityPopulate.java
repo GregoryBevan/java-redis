@@ -17,7 +17,7 @@ public class SimpleEntityPopulate {
 
 	public void populate() {
 		final List<SimpleEntity> entities = new ArrayList<>();
-		for (int i = 0; i < 100000; i++) {
+		for (int i = 0; i < 1000; i++) {
 			final SimpleEntity entity = new SimpleEntity();
 			entity.setCode(String.valueOf(i));
 			entity.setLabel("Simple entity " + i);

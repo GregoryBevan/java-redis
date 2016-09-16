@@ -1,5 +1,7 @@
 package com.elgregos.java.redis.service;
 
+import static com.elgregos.java.redis.cache.CompositeKeyEntityCache.COMPOSITE_KEY_ENTITIES;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +28,7 @@ public class CompositeKeyEntityService {
 	}
 
 	public CompositeKeyEntity loadFromCache(DoubleKey doubleKey) {
-		return (CompositeKeyEntity) cacheManager.getCache("composite-key-entities").get(doubleKey).get();
+		return (CompositeKeyEntity) cacheManager.getCache(COMPOSITE_KEY_ENTITIES).get(doubleKey).get();
 	}
 
 }

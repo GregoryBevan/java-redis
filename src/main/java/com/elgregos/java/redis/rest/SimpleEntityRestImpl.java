@@ -28,4 +28,9 @@ public class SimpleEntityRestImpl {
 		return service.getSimpleEntities();
 	}
 
+	@RequestMapping(method = RequestMethod.GET, path = "/all")
+	public List<SimpleEntity> getAllFromCache() {
+		return service.getSimpleEntitiesFromCache();
+	}
+
 }

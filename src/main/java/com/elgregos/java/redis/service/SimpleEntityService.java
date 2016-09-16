@@ -19,9 +19,16 @@ public class SimpleEntityService {
 	@Autowired
 	private CacheManager cacheManager;
 
+	@Autowired
+	private CacheManager cacheManagerForList;
+
 	@LogTime
 	public List<SimpleEntity> getSimpleEntities() {
 		return repository.findAll();
+	}
+
+	public List<SimpleEntity> getSimpleEntitiesFromCache() {
+		return (List<SimpleEntity>) cacheManagerForList.getCache("list").get("maliste");
 	}
 
 	public SimpleEntity loadFromCache(String code) {

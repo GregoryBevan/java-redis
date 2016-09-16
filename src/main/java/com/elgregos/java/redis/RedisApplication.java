@@ -87,8 +87,8 @@ public class RedisApplication {
 	}
 
 	@Bean
-	RedisTemplate<Object, Object> redisTemplate() {
-		final RedisTemplate<Object, Object> redisTemplate = new RedisTemplate<>();
+	RedisTemplate<String, String> redisTemplate() {
+		final RedisTemplate<String, String> redisTemplate = new RedisTemplate<>();
 		redisTemplate.setConnectionFactory(jedisConnectionFactory());
 		redisTemplate.setDefaultSerializer(new GenericJackson2JsonRedisSerializer());
 		redisTemplate.setKeySerializer(new GenericJackson2JsonRedisSerializer());

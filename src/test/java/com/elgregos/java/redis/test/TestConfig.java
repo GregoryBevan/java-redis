@@ -1,4 +1,4 @@
-package com.elgregos.java.redis.populate;
+package com.elgregos.java.redis.test;
 
 import java.util.Properties;
 
@@ -6,45 +6,37 @@ import javax.persistence.EntityManagerFactory;
 
 import org.hibernate.cfg.Environment;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.cache.CacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.data.redis.cache.RedisCacheManager;
+import org.springframework.data.redis.connection.RedisConnectionFactory;
+import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
 @Configuration
-@ComponentScan(basePackages = { "com.elgregos.java.redis.entities", "com.elgregos.java.redis.populate" })
+@EnableTransactionManagement
+@ComponentScan({ "com.elgregos.java.redis.entities", "com.elgregos.java.redis.cache",
+		"com.elgregos.java.redis.service" })
+@EnableJpaRepositories("com.elgregos.java.redis.entities")
 @PropertySource("classpath:application.properties")
-@EnableJpaRepositories(basePackages = "com.elgregos.java.redis.entities")
-public class Populate {
+@Profile("test")
+public class TestConfig {
 
 	@Autowired
 	private org.springframework.core.env.Environment env;
-
-	@Autowired
-	private SimpleEntityPopulate simpleEntityPopulate;
-
-	@Autowired
-	private CompositeKeyEntityPopulate compositeKeyEntityPopulate;
-
-	@Autowired
-	private HierarchyValuePopulate hierarchyPopulate;
-
-	public static void main(String... args) {
-		final AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(Populate.class);
-		final Populate populate = ctx.getBean(Populate.class);
-		populate.simpleEntityPopulate.populate();
-		populate.compositeKeyEntityPopulate.populate();
-		populate.hierarchyPopulate.populate();
-		ctx.close();
-	}
 
 	@Bean
 	public HikariDataSource dataSource() {
@@ -64,6 +56,17 @@ public class Populate {
 		factory.afterPropertiesSet();
 
 		return factory.getObject();
+	}
+
+	@Bean
+	public RedisConnectionFactory jedisConnectionFactory() {
+
+		final JedisConnectionFactory factory = new JedisConnectionFactory();
+		factory.setHostName("localhost");
+		factory.setPort(6379);
+		factory.setUsePool(true);
+
+		return factory;
 	}
 
 	public Properties jpaProperties() {
@@ -87,6 +90,13 @@ public class Populate {
 	}
 
 	@Bean
+	CacheManager cacheManager() {
+		final RedisCacheManager cacheManager = new RedisCacheManager(redisTemplate());
+		cacheManager.setDefaultExpiration(86400);
+		return cacheManager;
+	}
+
+	@Bean
 	HikariConfig hikariConfig() {
 		final HikariConfig config = new HikariConfig();
 		config.setJdbcUrl(env.getProperty("spring.datasource.url"));
@@ -101,5 +111,14 @@ public class Populate {
 		config.setMaxLifetime(Long.parseLong(env.getProperty("spring.datasource.maxLifetime")));
 
 		return config;
+	}
+
+	@Bean
+	RedisTemplate<String, String> redisTemplate() {
+		final RedisTemplate<String, String> redisTemplate = new RedisTemplate<>();
+		redisTemplate.setConnectionFactory(jedisConnectionFactory());
+		redisTemplate.setDefaultSerializer(new GenericJackson2JsonRedisSerializer());
+		redisTemplate.setKeySerializer(new GenericJackson2JsonRedisSerializer());
+		return redisTemplate;
 	}
 }
