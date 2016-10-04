@@ -13,11 +13,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.stereotype.Component;
 
 import com.elgregos.java.redis.aspect.LogTime;
+import com.elgregos.java.redis.conf.CustomRedisSerializer;
 import com.elgregos.java.redis.entities.SimpleEntity;
 import com.elgregos.java.redis.service.SimpleEntityService;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
@@ -36,9 +36,12 @@ public class SimpleEntityCache {
 		@Autowired
 		private RedisConnectionFactory jedisConnectionFactory;
 
+		@Autowired
+		private CustomRedisSerializer customRedisSerializer;
+
 		@Bean
-		RedisTemplate<String, String> simpleEntityRedisTemplate() {
-			final RedisTemplate<String, String> redisTemplate = new RedisTemplate<>();
+		RedisTemplate<String, Map<String, SimpleEntity>> simpleEntityRedisTemplate() {
+			final RedisTemplate<String, Map<String, SimpleEntity>> redisTemplate = new RedisTemplate<>();
 			redisTemplate.setConnectionFactory(jedisConnectionFactory);
 			final ObjectMapper mapper = new ObjectMapper();
 			mapper.setVisibility(PropertyAccessor.FIELD, Visibility.ANY);
@@ -48,7 +51,7 @@ public class SimpleEntityCache {
 			mapper.registerModule(new JodaModule());
 			redisTemplate.setKeySerializer(new StringRedisSerializer());
 			redisTemplate.setHashKeySerializer(new StringRedisSerializer());
-			redisTemplate.setValueSerializer(new GenericJackson2JsonRedisSerializer(mapper));
+			redisTemplate.setHashValueSerializer(customRedisSerializer);
 			return redisTemplate;
 		}
 	}
@@ -59,7 +62,7 @@ public class SimpleEntityCache {
 	private SimpleEntityService simpleEntityService;
 
 	@Autowired
-	private RedisTemplate<String, String> simpleEntityRedisTemplate;
+	private RedisTemplate<String, Map<String, SimpleEntity>> simpleEntityRedisTemplate;
 
 	private HashOperations<String, String, SimpleEntity> opsForHash;
 

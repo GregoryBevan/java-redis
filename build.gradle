@@ -30,6 +30,9 @@ dependencies {
     compile 'org.hibernate:hibernate-hikaricp:5.2.2.Final'
     compile 'joda-time:joda-time:2.9.4'
     compile 'com.fasterxml.jackson.datatype:jackson-datatype-joda:2.8.2'
+    compile 'com.fasterxml.jackson.datatype:jackson-datatype-hibernate5:2.8.2'
+    compile 'com.github.luben:zstd-jni:1.0.0'
+    compile 'org.msgpack:jackson-dataformat-msgpack:0.8.11'
     testCompile 'junit:junit:4.12'
     testCompile 'org.springframework:spring-test:4.3.2.RELEASE'
 }

@@ -11,18 +11,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.cache.CacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ComponentScan.Filter;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import org.springframework.data.redis.cache.RedisCacheManager;
-import org.springframework.data.redis.connection.RedisConnectionFactory;
-import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
-import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
 
 import com.elgregos.java.redis.cache.CacheLoader;
 import com.elgregos.java.redis.populate.Populate;
@@ -51,17 +45,6 @@ public class RedisApplication {
 	}
 
 	@Bean
-	public RedisConnectionFactory jedisConnectionFactory() {
-
-		final JedisConnectionFactory factory = new JedisConnectionFactory();
-		factory.setHostName("localhost");
-		factory.setPort(6379);
-		factory.setUsePool(true);
-
-		return factory;
-	}
-
-	@Bean
 	protected ServletContextListener listener() {
 		return new ServletContextListener() {
 
@@ -77,21 +60,5 @@ public class RedisApplication {
 			}
 
 		};
-	}
-
-	@Bean
-	CacheManager cacheManager() {
-		final RedisCacheManager cacheManager = new RedisCacheManager(redisTemplate());
-		cacheManager.setDefaultExpiration(86400);
-		return cacheManager;
-	}
-
-	@Bean
-	RedisTemplate<String, String> redisTemplate() {
-		final RedisTemplate<String, String> redisTemplate = new RedisTemplate<>();
-		redisTemplate.setConnectionFactory(jedisConnectionFactory());
-		redisTemplate.setDefaultSerializer(new GenericJackson2JsonRedisSerializer());
-		redisTemplate.setKeySerializer(new GenericJackson2JsonRedisSerializer());
-		return redisTemplate;
 	}
 }

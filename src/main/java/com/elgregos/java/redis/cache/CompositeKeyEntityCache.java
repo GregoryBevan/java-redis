@@ -18,6 +18,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.stereotype.Component;
 
 import com.elgregos.java.redis.aspect.LogTime;
+import com.elgregos.java.redis.conf.CustomRedisSerializer;
 import com.elgregos.java.redis.entities.CompositeKeyEntity;
 import com.elgregos.java.redis.entities.key.DoubleKey;
 import com.elgregos.java.redis.service.CompositeKeyEntityService;
@@ -37,9 +38,12 @@ public class CompositeKeyEntityCache {
 		@Autowired
 		private RedisConnectionFactory jedisConnectionFactory;
 
+		@Autowired
+		private CustomRedisSerializer customRedisSerializer;
+
 		@Bean
-		RedisTemplate<String, String> compositeKeyEntityRedisTemplate() {
-			final RedisTemplate<String, String> redisTemplate = new RedisTemplate<>();
+		RedisTemplate<String, Map<DoubleKey, CompositeKeyEntity>> compositeKeyEntityRedisTemplate() {
+			final RedisTemplate<String, Map<DoubleKey, CompositeKeyEntity>> redisTemplate = new RedisTemplate<>();
 			redisTemplate.setConnectionFactory(jedisConnectionFactory);
 			final ObjectMapper mapper = new ObjectMapper();
 			mapper.setVisibility(PropertyAccessor.FIELD, Visibility.ANY);
@@ -48,8 +52,8 @@ public class CompositeKeyEntityCache {
 			mapper.enableDefaultTyping(DefaultTyping.NON_FINAL, As.PROPERTY);
 			mapper.registerModule(new JodaModule());
 			redisTemplate.setKeySerializer(new StringRedisSerializer());
-			redisTemplate.setHashKeySerializer(new GenericJackson2JsonRedisSerializer(mapper));
-			redisTemplate.setValueSerializer(new GenericJackson2JsonRedisSerializer(mapper));
+			redisTemplate.setHashKeySerializer(new GenericJackson2JsonRedisSerializer());
+			redisTemplate.setHashValueSerializer(customRedisSerializer);
 			return redisTemplate;
 		}
 	}
@@ -60,7 +64,7 @@ public class CompositeKeyEntityCache {
 	private CompositeKeyEntityService compositeKeyEntityService;
 
 	@Autowired
-	private RedisTemplate<String, String> compositeKeyEntityRedisTemplate;
+	private RedisTemplate<String, Map<DoubleKey, CompositeKeyEntity>> compositeKeyEntityRedisTemplate;
 
 	private HashOperations<String, DoubleKey, CompositeKeyEntity> opsForHash;
 
