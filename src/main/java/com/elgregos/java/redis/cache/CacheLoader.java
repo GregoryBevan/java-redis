@@ -17,11 +17,15 @@ public class CacheLoader {
 	@Autowired
 	private HierarchyValueCache hierarchyValueCache;
 
+	@Autowired
+	private OtherHierarchyValueCache otherHierarchyValueCache;
+
 	@LogTime
 	public void loadCache() {
 		simpleEntityCache.loadCache();
 		compositeKeyEntityCache.loadCache();
 		hierarchyValueCache.loadCache();
+		otherHierarchyValueCache.loadCache();
 	}
 
 }
