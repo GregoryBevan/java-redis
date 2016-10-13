@@ -1,7 +1,5 @@
 package com.elgregos.java.redis.rest;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,11 +19,6 @@ public class HierarchyValueRestImpl {
 	@RequestMapping(method = RequestMethod.GET, value = "/{id}")
 	public HierarchyValue get(@PathVariable("id") Long id) {
 		return service.getByIdFromCache(id);
-	}
-
-	@RequestMapping(method = RequestMethod.GET, path = "/all")
-	public List<HierarchyValue> getAllFromCache() {
-		return service.getAllFromCache();
 	}
 
 }

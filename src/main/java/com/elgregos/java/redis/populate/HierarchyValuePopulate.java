@@ -51,7 +51,7 @@ public class HierarchyValuePopulate {
 				hierarchyLevelRepository.save(hierarchyLevel);
 				hierarchyValues.put(j, new ArrayList<>());
 
-				for (int k = 0, random2 = new Random().nextInt(550) + 1; k <= random2; k++) {
+				for (int k = 0, random2 = new Random().nextInt(800) + 1; k <= random2; k++) {
 					final HierarchyValue hierarchyValue = new HierarchyValue();
 					hierarchyValue.setCode("HV" + i + "-" + j + "-" + k);
 					hierarchyValue.setLabel("Value " + i + "-" + j + "-" + k);

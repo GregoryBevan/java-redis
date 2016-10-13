@@ -1,0 +1,500 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,grpThreads,allThreads,Latency,IdleTime
+1476264293980,16315,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,16315,0
+1476264310415,9254,Load cache request,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: localhost:8080 failed to respond,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: org.apache.http.NoHttpResponseException]]]
+
+****** comparison: [[[200                                                            ]]]
+
+/",2267,1,1,0,0
+1476264320674,1013,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264322690,1001,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264324695,1002,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264326711,1001,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264328725,1002,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264330727,1001,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264332731,1011,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264334747,1003,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264336752,1002,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264338757,1001,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264340763,1008,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264342774,1005,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264344796,1015,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264346814,1001,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264348816,1011,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264350843,1001,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264352848,1002,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264354852,1006,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264392228,29290,Load cache request,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: localhost:8080 failed to respond,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: org.apache.http.NoHttpResponseException]]]
+
+****** comparison: [[[200                                                            ]]]
+
+/",2267,1,1,0,0
+1476264422521,1002,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264424525,1012,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264426538,1007,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264428563,1001,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264430567,1001,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264432572,1005,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264434579,1004,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264436586,1001,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264438589,1000,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264440591,1005,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264442600,1002,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264444605,1012,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264584003,49491,Load cache request,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: localhost:8080 failed to respond,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: org.apache.http.NoHttpResponseException]]]
+
+****** comparison: [[[200                                                            ]]]
+
+/",2267,1,1,0,0
+1476264634507,1001,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264636512,1013,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264638526,1002,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476264703213,13149,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,13149,0
+1476264716980,5568,Load cache request,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: localhost:8080 failed to respond,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: org.apache.http.NoHttpResponseException]]]
+
+****** comparison: [[[200                                                            ]]]
+
+/",2267,1,1,0,0
+1476264769343,11264,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,11264,0
+1476264781275,11391,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,11391,0
+1476264793314,10973,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,10973,0
+1476264804942,11129,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,11129,0
+1476264816705,11247,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,11247,0
+1476264828577,10969,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,10969,0
+1476264840228,11289,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,11289,0
+1476264852163,193378,Load cache request,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: localhost:8080 failed to respond,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: org.apache.http.NoHttpResponseException]]]
+
+****** comparison: [[[200                                                            ]]]
+
+/",2267,1,1,0,0
+1476265046548,1002,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476265048553,1003,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476265050559,1002,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476265052565,1012,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476265054580,1003,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476265056585,1002,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476265058591,1003,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476265060597,1014,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476265062616,1013,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476265064631,1008,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476265066641,1003,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476265068647,1004,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476265111694,10978,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,10978,0
+1476265123308,12111,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,12111,0
+1476265136059,11535,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,11535,0
+1476265148232,10919,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,10919,0
+1476265159812,11536,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,11536,0
+1476265172028,11073,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,11073,0
+1476265183745,11277,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,11277,0
+1476265195663,1172857,Load cache request,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: localhost:8080 failed to respond,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: org.apache.http.NoHttpResponseException]]]
+
+****** comparison: [[[200                                                            ]]]
+
+/",2267,1,1,0,0
+1476266369533,1001,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476266371537,1001,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476266373552,1002,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476266375556,1001,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476266377561,1013,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476266379576,1002,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476266381583,1002,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476266383589,1002,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476266385596,1003,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476266387603,1001,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476266389606,1003,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476266391613,1013,Load cache request,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,0,0
+1476266462607,11426,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,11426,0
+1476266474680,11317,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,11317,0
+1476266486641,11560,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,11560,0
+1476266498896,11191,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,11191,0
+1476266510720,10877,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,10877,0
+1476266522274,10897,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,10897,0
+1476266533787,11279,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,11279,0
+1476266545683,10534,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,10534,0
+1476266556827,10673,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,10673,0
+1476266568123,11262,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,11262,0
+1476266580071,10592,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,10592,0
+1476266591279,10986,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,10986,0
+1476266602889,10427,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,10427,0
+1476266613955,11104,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,11104,0
+1476266625677,10253,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,10253,0
+1476266636557,91654,Load cache request,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: localhost:8080 failed to respond,Cache loader 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: org.apache.http.NoHttpResponseException]]]
+
+****** comparison: [[[200                                                            ]]]
+
+/",2267,1,1,0,0
+1476266793586,11922,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,11922,0
+1476266806149,11421,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,11421,0
+1476266818288,11187,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,11187,0
+1476266830105,11202,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,11202,0
+1476266841962,11126,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,11126,0
+1476266853734,11567,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,11567,0
+1476266865944,11710,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,11710,0
+1476266878305,10464,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,10464,0
+1476266889391,11218,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,11218,0
+1476266901241,10328,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,10328,0
+1476266912238,11154,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,11154,0
+1476266924052,10744,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,10744,0
+1476266935430,11059,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,11059,0
+1476266947117,10604,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,10604,0
+1476266958354,10927,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,10927,0
+1476266970069,10517,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,10517,0
+1476266981251,11229,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,11229,0
+1476266993122,10180,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,10180,0
+1476267003988,11208,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,11208,0
+1476267015852,10501,Load cache request,200,,Cache loader 1-1,text,true,,126,1,1,10501,0

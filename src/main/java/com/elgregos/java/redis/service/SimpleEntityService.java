@@ -19,7 +19,7 @@ public class SimpleEntityService {
 	@Autowired
 	private SimpleEntityCache simpleEntityCache;
 
-	@LogTime
+	// @LogTime
 	public List<SimpleEntity> getAllFromCache() {
 		return simpleEntityCache.getAllFromCache();
 	}
@@ -29,7 +29,7 @@ public class SimpleEntityService {
 		return repository.findAll();
 	}
 
-	@LogTime
+	// @LogTime
 	public SimpleEntity loadFromCache(String code) {
 		return simpleEntityCache.get(code);
 	}

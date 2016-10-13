@@ -5,15 +5,12 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import javax.annotation.PostConstruct;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
-import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.serializer.GenericToStringSerializer;
+import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.stereotype.Component;
 
@@ -33,7 +30,7 @@ import com.fasterxml.jackson.datatype.joda.JodaModule;
 public class HierarchyValueCache {
 
 	@Configuration
-	static class HierarchyValueCacheConfig {
+	static class OtherHierarchyValueCacheConfig {
 
 		@Autowired
 		private RedisConnectionFactory jedisConnectionFactory;
@@ -42,8 +39,13 @@ public class HierarchyValueCache {
 		private CustomRedisSerializer customRedisSerializer;
 
 		@Bean
-		RedisTemplate<String, Map<Long, HierarchyValue>> hierarchyValueRedisTemplate() {
-			final RedisTemplate<String, Map<Long, HierarchyValue>> redisTemplate = new RedisTemplate<>();
+		ValueOperations<String, HierarchyValue> hierarchyValueCacheOperations() {
+			return otherHierarchyValueRedisTemplate().opsForValue();
+		}
+
+		@Bean
+		RedisTemplate<String, HierarchyValue> otherHierarchyValueRedisTemplate() {
+			final RedisTemplate<String, HierarchyValue> redisTemplate = new RedisTemplate<>();
 			redisTemplate.setConnectionFactory(jedisConnectionFactory);
 			final ObjectMapper mapper = new ObjectMapper();
 			mapper.setVisibility(PropertyAccessor.FIELD, Visibility.ANY);
@@ -52,13 +54,12 @@ public class HierarchyValueCache {
 			mapper.enableDefaultTyping(DefaultTyping.NON_FINAL, As.PROPERTY);
 			mapper.registerModule(new JodaModule());
 			redisTemplate.setKeySerializer(new StringRedisSerializer());
-			redisTemplate.setHashKeySerializer(new GenericToStringSerializer<>(Long.class));
-			redisTemplate.setHashValueSerializer(customRedisSerializer);
+			redisTemplate.setValueSerializer(customRedisSerializer);
 			return redisTemplate;
 		}
 	}
 
-	private static final String HIERARCHY_VALUES = "hierarchy-values";
+	private static final String KEY_PREFIX = "ohv_";
 
 	@Autowired
 	private HierarchyService hierarchyService;
@@ -67,23 +68,11 @@ public class HierarchyValueCache {
 	private HierarchyValueService hierarchyValueService;
 
 	@Autowired
-	private RedisTemplate<String, Map<Long, HierarchyValue>> hierarchyValueRedisTemplate;
-
-	private HashOperations<String, Long, HierarchyValue> opsForHash;
-
-	@LogTime
-	public List<HierarchyValue> getAll() {
-		return opsForHash.values(HIERARCHY_VALUES);
-	}
+	private ValueOperations<String, HierarchyValue> hierarchyValueCacheOperations;
 
 	@LogTime
 	public HierarchyValue getById(Long id) {
-		return opsForHash.get(HIERARCHY_VALUES, id);
-	}
-
-	@PostConstruct
-	public void init() {
-		opsForHash = hierarchyValueRedisTemplate.opsForHash();
+		return hierarchyValueCacheOperations.get(KEY_PREFIX.concat(id.toString()));
 	}
 
 	@LogTime
@@ -91,12 +80,12 @@ public class HierarchyValueCache {
 		hierarchyService.getAllHierarchyCodes().forEach(hierarchyCode -> loadCache(hierarchyCode));
 	}
 
-	private void loadCache(String hierarchyCode) {
+	public void loadCache(String hierarchyCode) {
 		final List<HierarchyValue> hierarchyValues = hierarchyValueService.findByHierarchyCode(hierarchyCode);
-		final Map<Long, HierarchyValue> map = hierarchyValues.stream()
-				.collect(Collectors.toMap(HierarchyValue::getId, Function.identity()));
+		final Map<String, HierarchyValue> map = hierarchyValues.stream()
+				.collect(Collectors.toMap(h -> KEY_PREFIX.concat(h.getId().toString()), Function.identity()));
 
-		opsForHash.putAll(HIERARCHY_VALUES, map);
+		hierarchyValueCacheOperations.multiSet(map);
 	}
 
 }
