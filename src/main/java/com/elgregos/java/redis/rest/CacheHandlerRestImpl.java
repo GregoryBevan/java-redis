@@ -10,7 +10,7 @@ import com.elgregos.java.redis.cache.CacheLoader;
 
 @RestController
 @RequestMapping("cache-handler")
-public class LoadCacheRestImpl {
+public class CacheHandlerRestImpl {
 
 	@Autowired
 	private CacheLoader cacheLoader;
