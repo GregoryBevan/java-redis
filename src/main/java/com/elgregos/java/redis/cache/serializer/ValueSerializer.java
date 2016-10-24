@@ -1,10 +1,11 @@
-package com.elgregos.java.redis.conf;
+package com.elgregos.java.redis.cache.serializer;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 
 import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.data.redis.serializer.SerializationException;
+import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
 import com.fasterxml.jackson.annotation.JsonTypeInfo.As;
@@ -19,13 +20,14 @@ import com.fasterxml.jackson.datatype.joda.JodaModule;
 import com.github.luben.zstd.Zstd;
 import com.github.luben.zstd.ZstdInputStream;
 
-public class CustomRedisSerializer implements RedisSerializer<Object> {
+@Component
+public class ValueSerializer implements RedisSerializer<Object> {
 
 	private static final byte[] EMPTY_ARRAY = new byte[0];
 
 	private final ObjectMapper objectMapper;
 
-	public CustomRedisSerializer() {
+	public ValueSerializer() {
 		this.objectMapper = new ObjectMapper();
 		objectMapper.setVisibility(PropertyAccessor.FIELD, Visibility.ANY);
 		objectMapper.setVisibility(PropertyAccessor.GETTER, Visibility.NONE);

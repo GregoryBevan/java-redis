@@ -19999,3 +19999,478 @@ timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success
 1476280446641,2,Request - Load composite key entities,200,,Composite key entities 2-14,text,true,,617,1,9,http://localhost:8080/composite-key-entities/E/8934,2,0,0
 1476280446643,1,Request - Load composite key entities,200,,Composite key entities 2-14,text,true,,617,1,8,http://localhost:8080/composite-key-entities/N/5668,1,0,0
 1476280446644,2,Request - Load composite key entities,200,,Composite key entities 2-14,text,true,,617,1,6,http://localhost:8080/composite-key-entities/O/9352,2,0,0
+1477039776767,1013,Request - Get multi composite key entities,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Composite key entities 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,http://localhost:8080/composite-key-entities/multi/20000,0,0,1013
+1477039777781,1002,Request - Get multi composite key entities,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Composite key entities 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,http://localhost:8080/composite-key-entities/multi/20000,0,0,1002
+1477039778785,1003,Request - Get multi composite key entities,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Composite key entities 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,http://localhost:8080/composite-key-entities/multi/20000,0,0,1003
+1477039779790,1013,Request - Get multi composite key entities,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Composite key entities 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,http://localhost:8080/composite-key-entities/multi/20000,0,0,1013
+1477039780803,1003,Request - Get multi composite key entities,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Composite key entities 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,http://localhost:8080/composite-key-entities/multi/20000,0,0,1003
+1477039781806,1016,Request - Get multi composite key entities,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Composite key entities 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,http://localhost:8080/composite-key-entities/multi/20000,0,0,1016
+1477039782823,1001,Request - Get multi composite key entities,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Composite key entities 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,http://localhost:8080/composite-key-entities/multi/20000,0,0,1001
+1477039783825,1004,Request - Get multi composite key entities,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Composite key entities 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,http://localhost:8080/composite-key-entities/multi/20000,0,0,1004
+1477039784830,1003,Request - Get multi composite key entities,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Composite key entities 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,http://localhost:8080/composite-key-entities/multi/20000,0,0,1002
+1477039785834,1002,Request - Get multi composite key entities,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Composite key entities 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,http://localhost:8080/composite-key-entities/multi/20000,0,0,1002
+1477039786837,1002,Request - Get multi composite key entities,Non HTTP response code: java.net.SocketException,Non HTTP response message: Socket operation on nonsocket: connect,Composite key entities 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2214,1,1,http://localhost:8080/composite-key-entities/multi/20000,0,0,1002
+1477039828078,27824,Request - Get multi composite key entities,Non HTTP response code: java.net.SocketException,Non HTTP response message: Socket closed,Composite key entities 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2748,1,1,http://localhost:8080/composite-key-entities/multi/20000,0,0,35
+1477039905663,6617,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6617,0,81
+1477039912280,6219,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6219,0,93
+1477039918500,6088,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6088,0,0
+1477039924588,6076,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6076,0,1
+1477039930664,6001,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6001,0,1
+1477039936666,6307,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6307,0,37
+1477039942973,6562,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6562,0,77
+1477039949534,6377,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6377,0,40
+1477039955912,5966,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,5966,0,1
+1477039961878,6029,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6029,0,1
+1477039967906,6262,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6262,0,1
+1477039974170,5978,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,5978,0,0
+1477039980148,6027,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6027,0,1
+1477039986175,5985,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,5985,0,1
+1477039992160,6041,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6041,0,1
+1477039998201,6077,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6077,0,1
+1477040004278,6496,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6496,0,1
+1477040010773,6240,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6240,0,1
+1477040017014,6011,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6011,0,1
+1477040023025,6333,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6333,0,1
+1477040029359,6348,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6348,0,86
+1477040035707,6337,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6337,0,67
+1477040042044,6217,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6217,0,52
+1477040048261,6045,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6045,0,1
+1477040054306,6506,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6506,0,1
+1477040060813,6126,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6126,0,1
+1477040066939,6444,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6444,0,1
+1477040073383,6222,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6222,0,1
+1477040079606,6159,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6159,0,1
+1477040085766,6231,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6231,0,1
+1477040091996,6271,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6271,0,1
+1477040098268,6383,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6383,0,1
+1477040104651,6257,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6257,0,1
+1477040110908,6059,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6059,0,1
+1477040116967,6272,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6272,0,1
+1477040123239,6583,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6583,0,2
+1477040129822,6293,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6293,0,1
+1477040136115,6049,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6049,0,1
+1477040142163,6143,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6143,0,1
+1477040148307,6112,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6112,0,0
+1477040154420,6183,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6183,0,1
+1477040160604,6036,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6036,0,0
+1477040166641,6066,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6066,0,0
+1477040172706,6115,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6115,0,1
+1477040178821,6087,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6087,0,1
+1477040184909,6729,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6729,0,2
+1477040191638,6176,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6176,0,1
+1477040197814,6096,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6096,0,1
+1477040203910,6213,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6213,0,1
+1477040210123,6971,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6971,0,1
+1477040217095,6640,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6640,0,1
+1477040223735,6243,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6243,0,1
+1477040229979,6054,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6054,0,1
+1477040236033,6161,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6161,0,1
+1477040242194,6430,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6430,0,1
+1477040248625,6560,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6560,0,1
+1477040255185,6080,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6080,0,1
+1477040261265,6052,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6052,0,1
+1477040267318,6142,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6142,0,1
+1477040273460,6172,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6172,0,1
+1477040279632,6152,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6152,0,2
+1477040285784,6400,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6400,0,1
+1477040292184,6272,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6272,0,91
+1477040298456,6076,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6076,0,45
+1477040304533,6862,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6862,0,92
+1477040311395,6179,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6179,0,1
+1477040317575,6039,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6039,0,0
+1477040323614,5978,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,5978,0,1
+1477040329593,6129,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6129,0,0
+1477040335722,6563,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6563,0,1
+1477040342285,6154,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6154,0,1
+1477040348439,6436,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6436,0,1
+1477040354874,6284,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6284,0,1
+1477040361160,6674,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6674,0,0
+1477040367834,6291,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6291,0,1
+1477040374124,6209,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6209,0,1
+1477040380334,6135,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6135,0,1
+1477040386470,6093,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6093,0,0
+1477040392564,5890,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,5890,0,1
+1477040398454,6252,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6252,0,1
+1477040404706,5915,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,5915,0,1
+1477040410622,6102,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6102,0,0
+1477040416724,6028,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6028,0,1
+1477040422752,6249,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6249,0,1
+1477040429002,6117,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6117,0,0
+1477040435119,6023,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6023,0,1
+1477040441143,6054,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6054,0,1
+1477040447197,6073,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6073,0,1
+1477040453271,6281,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6281,0,0
+1477040459552,6553,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6553,0,1
+1477040466105,6075,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6075,0,1
+1477040472180,6521,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6521,0,45
+1477040478701,6735,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6735,0,47
+1477040485436,6393,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6393,0,24
+1477040491831,6172,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6172,0,1
+1477040498004,6030,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6030,0,1
+1477040504033,6231,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6231,0,1
+1477040510265,6453,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6453,0,1
+1477040516718,6049,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6049,0,1
+1477040522767,6282,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/20000,6282,0,1
+1477044973862,219,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,219,0,1
+1477044974081,114,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,114,0,0
+1477044974195,93,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,93,0,0
+1477044974288,81,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,81,0,0
+1477044974369,108,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,108,0,0
+1477044974477,67,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,67,0,0
+1477044974544,76,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,76,0,0
+1477044974620,77,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,77,0,0
+1477044974697,100,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,100,0,0
+1477044974797,74,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,74,0,0
+1477044974872,72,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,72,0,0
+1477044974944,103,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,103,0,0
+1477044975047,85,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,85,0,0
+1477044975132,82,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,82,0,0
+1477044975214,70,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,70,0,0
+1477044975284,69,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,69,0,0
+1477044975353,70,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,70,0,0
+1477044975423,67,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,67,0,0
+1477044975490,67,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,67,0,0
+1477044975557,99,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,99,0,0
+1477044975656,64,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,64,0,0
+1477044975721,68,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,68,0,0
+1477044975789,87,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,87,0,0
+1477044975876,65,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,65,0,1
+1477044975941,69,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,69,0,0
+1477044976010,68,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,68,0,0
+1477044976078,63,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,63,0,0
+1477044976141,104,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,104,0,0
+1477044976245,69,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,69,0,0
+1477044976315,74,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,74,0,0
+1477044976389,62,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,62,0,0
+1477044976451,67,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,67,0,0
+1477044976518,67,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,67,0,0
+1477044976585,67,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,67,0,0
+1477044976652,64,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,64,0,0
+1477044976716,96,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,96,0,0
+1477044976813,64,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,64,0,0
+1477044976877,64,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,64,0,0
+1477044976941,65,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,65,0,0
+1477044977006,63,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,63,0,0
+1477044977069,101,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,101,0,0
+1477044977170,69,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,69,0,0
+1477044977239,63,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,63,0,0
+1477044977303,66,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,66,0,0
+1477044977369,104,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,104,0,0
+1477044977473,66,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,66,0,0
+1477044977540,70,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,70,0,0
+1477044977610,68,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,68,0,0
+1477044977678,67,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,67,0,0
+1477044977745,66,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,66,0,0
+1477044977811,69,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,69,0,0
+1477044977880,69,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,69,0,1
+1477044977949,65,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,65,0,0
+1477044978014,95,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,95,0,0
+1477044978110,70,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,70,0,0
+1477044978180,74,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,74,0,0
+1477044978254,162,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,162,0,0
+1477044978416,66,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,66,0,0
+1477044978482,65,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,65,0,0
+1477044978547,70,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,70,0,0
+1477044978618,66,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,66,0,0
+1477044978684,67,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,67,0,0
+1477044978751,68,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,68,0,0
+1477044978819,89,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,89,0,0
+1477044978908,74,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,74,0,0
+1477044978983,65,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,65,0,0
+1477044979048,74,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,74,0,0
+1477044979122,93,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,93,0,0
+1477044979215,66,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,66,0,0
+1477044979281,72,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,72,0,0
+1477044979353,64,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,64,0,0
+1477044979417,68,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,68,0,0
+1477044979485,63,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,63,0,0
+1477044979548,70,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,70,0,0
+1477044979618,65,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,65,0,0
+1477044979684,64,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,64,0,0
+1477044979748,79,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,79,0,0
+1477044979827,73,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,73,0,0
+1477044979900,65,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,65,0,0
+1477044979965,65,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,65,0,0
+1477044980031,65,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,65,0,0
+1477044980096,74,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,74,0,0
+1477044980170,67,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,67,0,0
+1477044980237,62,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,62,0,0
+1477044980299,73,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,73,0,0
+1477044980372,66,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,66,0,0
+1477044980438,69,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,69,0,0
+1477044980507,66,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,66,0,0
+1477044980573,67,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,67,0,0
+1477044980640,71,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,71,0,0
+1477044980711,75,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,75,0,0
+1477044980786,69,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,69,0,0
+1477044980855,66,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,66,0,0
+1477044980921,64,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,64,0,0
+1477044980985,84,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,84,0,0
+1477044981070,87,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,87,0,0
+1477044981157,80,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,80,0,0
+1477044981237,76,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,76,0,0
+1477044981313,64,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,64,0,0
+1477044981378,66,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/200,66,0,0
+1477054327818,896,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,896,0,1
+1477054328715,791,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,791,0,0
+1477054329506,613,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,613,0,0
+1477054330119,745,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,745,0,1
+1477054330864,603,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,603,0,0
+1477054331467,628,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,628,0,0
+1477054332095,616,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,616,0,0
+1477054332712,624,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,624,0,1
+1477054333336,664,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,664,0,0
+1477054334000,807,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,807,0,0
+1477054334807,656,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,656,0,1
+1477054335463,688,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,688,0,0
+1477054336151,601,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,601,0,0
+1477054336752,605,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,605,0,0
+1477054337357,624,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,624,0,1
+1477054337981,705,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,705,0,0
+1477054338686,698,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,698,0,0
+1477054339384,667,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,667,0,1
+1477054340051,717,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,717,0,0
+1477054340768,647,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,647,0,0
+1477054341415,618,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,618,0,1
+1477054342033,665,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,665,0,0
+1477054342698,626,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,626,0,0
+1477054343324,653,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,653,0,0
+1477054343977,597,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,597,0,0
+1477054344574,635,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,635,0,0
+1477054345209,612,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,612,0,0
+1477054345822,604,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,604,0,0
+1477054346426,634,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,634,0,1
+1477054347061,670,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,670,0,0
+1477054347731,631,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,631,0,0
+1477054348362,629,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,629,0,0
+1477054348991,635,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,635,0,1
+1477054349625,640,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,640,0,0
+1477054350265,601,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,601,0,0
+1477054350866,630,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,630,0,0
+1477054351497,637,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,637,0,0
+1477054352134,689,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,689,0,0
+1477054352823,616,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,616,0,0
+1477054353439,638,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,638,0,0
+1477054354077,593,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,593,0,1
+1477054354671,623,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,623,0,0
+1477054355294,625,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,625,0,0
+1477054355919,632,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,632,0,0
+1477054356552,605,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,605,0,0
+1477054357157,721,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,721,0,0
+1477054357878,733,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,733,0,0
+1477054358612,657,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,657,0,2
+1477054359269,633,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,633,0,0
+1477054359902,639,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,639,0,0
+1477054360541,665,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,665,0,0
+1477054361206,650,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,650,0,1
+1477054361856,635,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,635,0,0
+1477054362491,640,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,640,0,0
+1477054363131,614,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,614,0,0
+1477054363745,610,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,610,0,1
+1477054364355,593,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,593,0,0
+1477054364947,612,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,612,0,0
+1477054365559,603,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,603,0,0
+1477054366163,620,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,620,0,0
+1477054366783,618,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,618,0,0
+1477054367401,595,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,595,0,0
+1477054367996,593,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,593,0,0
+1477054368589,594,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,594,0,1
+1477054369183,616,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,616,0,0
+1477054369800,621,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,621,0,0
+1477054370421,595,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,595,0,0
+1477054371016,777,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,777,0,1
+1477054371793,613,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,613,0,0
+1477054372406,671,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,671,0,0
+1477054373077,626,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,626,0,1
+1477054373703,590,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,590,0,0
+1477054374293,592,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,592,0,0
+1477054374885,627,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,627,0,0
+1477054375512,593,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,593,0,1
+1477054376105,613,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,613,0,0
+1477054376719,589,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,589,0,0
+1477054377308,632,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,632,0,0
+1477054377940,632,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,632,0,1
+1477054378572,592,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,592,0,0
+1477054379164,594,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,594,0,0
+1477054379758,606,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,606,0,0
+1477054380365,711,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,711,0,1
+1477054381076,721,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,721,0,0
+1477054381797,625,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,625,0,0
+1477054382422,729,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,729,0,1
+1477054383151,745,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,745,0,0
+1477054383896,650,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,650,0,0
+1477054384546,592,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,592,0,0
+1477054385138,626,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,626,0,0
+1477054385764,591,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,591,0,0
+1477054386355,620,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,620,0,0
+1477054386975,623,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,623,0,1
+1477054387598,601,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,601,0,0
+1477054388199,621,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,621,0,0
+1477054388820,586,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,586,0,0
+1477054389407,601,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,601,0,1
+1477054390008,666,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,666,0,0
+1477054390674,590,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,590,0,0
+1477054391264,603,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/2000,603,0,0
+1477056375596,30617,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,30617,0,1
+1477056406212,31718,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,31718,0,1
+1477056437931,31912,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,31912,0,2
+1477056469843,31147,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,31147,0,1
+1477056500989,31321,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,31321,0,1
+1477056532311,32764,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,32764,0,1
+1477056565076,31044,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,31044,0,1
+1477056596119,31737,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,31737,0,1
+1477056627857,31592,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,31592,0,1
+1477056659449,31563,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,31563,0,1
+1477056691012,31740,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,31740,0,1
+1477056722752,31027,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,31027,0,1
+1477056753779,31771,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,31771,0,1
+1477056785550,30895,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,30895,0,1
+1477056816445,31660,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,31660,0,1
+1477056848105,31869,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,31869,0,1
+1477056879975,30937,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,30937,0,1
+1477056910912,30842,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,30842,0,1
+1477056941754,30951,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,30951,0,1
+1477056972705,30400,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,30400,0,1
+1477057003106,30811,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,30811,0,1
+1477057033917,32388,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,32388,0,1
+1477057066306,32893,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,32893,0,1
+1477057099199,30714,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,30714,0,1
+1477057129912,32003,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,32003,0,1
+1477057161916,31124,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,31124,0,1
+1477057193040,31966,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,31966,0,1
+1477057225006,32015,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,32015,0,1
+1477057257021,31737,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,31737,0,1
+1477057288759,35007,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,35007,0,1
+1477057323766,31428,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,31428,0,1
+1477057355194,32655,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,32655,0,1
+1477057387849,30451,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,30451,0,1
+1477057418300,32118,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,32118,0,1
+1477057450418,30676,Request - Get multi composite key entities,200,,Composite key entities 1-1,,true,,73,1,1,http://localhost:8080/composite-key-entities/multi/100000,30676,0,1
+1477057481094,28425,Request - Get multi composite key entities,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: localhost:8080 failed to respond,Composite key entities 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: org.apache.http.NoHttpResponseException]]]
+
+****** comparison: [[[200                                                            ]]]
+
+/",2267,1,1,http://localhost:8080/composite-key-entities/multi/100000,0,0,1
+1477057509519,1013,Request - Get multi composite key entities,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Composite key entities 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,http://localhost:8080/composite-key-entities/multi/100000,0,0,1013
+1477057510533,1001,Request - Get multi composite key entities,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Composite key entities 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,http://localhost:8080/composite-key-entities/multi/100000,0,0,1001
+1477057511535,1013,Request - Get multi composite key entities,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Composite key entities 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,http://localhost:8080/composite-key-entities/multi/100000,0,0,1013
+1477057512548,1003,Request - Get multi composite key entities,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Composite key entities 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,http://localhost:8080/composite-key-entities/multi/100000,0,0,1003
+1477057513551,1015,Request - Get multi composite key entities,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Composite key entities 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,http://localhost:8080/composite-key-entities/multi/100000,0,0,1015
+1477057514566,1002,Request - Get multi composite key entities,Non HTTP response code: java.net.SocketException,Non HTTP response message: Permission denied: connect,Composite key entities 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2202,1,1,http://localhost:8080/composite-key-entities/multi/100000,0,0,1002
+1477057515568,1008,Request - Get multi composite key entities,Non HTTP response code: java.net.SocketException,Non HTTP response message: Socket operation on nonsocket: connect,Composite key entities 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.SocketException]]]
+
+****** comparison: [[[200                                             ]]]
+
+/",2214,1,1,http://localhost:8080/composite-key-entities/multi/100000,0,0,1008

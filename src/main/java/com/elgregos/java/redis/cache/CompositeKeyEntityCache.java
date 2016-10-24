@@ -1,33 +1,25 @@
 package com.elgregos.java.redis.cache;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import javax.annotation.PostConstruct;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
-import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
-import org.springframework.data.redis.serializer.StringRedisSerializer;
+import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Component;
 
 import com.elgregos.java.redis.aspect.LogTime;
-import com.elgregos.java.redis.conf.CustomRedisSerializer;
+import com.elgregos.java.redis.cache.serializer.CompositeKeyEntitySerialier;
+import com.elgregos.java.redis.cache.serializer.ValueSerializer;
 import com.elgregos.java.redis.entities.CompositeKeyEntity;
 import com.elgregos.java.redis.entities.key.DoubleKey;
 import com.elgregos.java.redis.service.CompositeKeyEntityService;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonTypeInfo.As;
-import com.fasterxml.jackson.annotation.PropertyAccessor;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectMapper.DefaultTyping;
-import com.fasterxml.jackson.datatype.joda.JodaModule;
 
 @Component
 public class CompositeKeyEntityCache {
@@ -39,21 +31,22 @@ public class CompositeKeyEntityCache {
 		private RedisConnectionFactory jedisConnectionFactory;
 
 		@Autowired
-		private CustomRedisSerializer customRedisSerializer;
+		private CompositeKeyEntitySerialier keySerializer;
+
+		@Autowired
+		private ValueSerializer customRedisSerializer;
 
 		@Bean
-		RedisTemplate<String, Map<DoubleKey, CompositeKeyEntity>> compositeKeyEntityRedisTemplate() {
-			final RedisTemplate<String, Map<DoubleKey, CompositeKeyEntity>> redisTemplate = new RedisTemplate<>();
+		public ValueOperations<DoubleKey, CompositeKeyEntity> compositeKeyEntityValueOperations() {
+			return compositeKeyEntityRedisTemplate().opsForValue();
+		}
+
+		@Bean
+		RedisTemplate<DoubleKey, CompositeKeyEntity> compositeKeyEntityRedisTemplate() {
+			final RedisTemplate<DoubleKey, CompositeKeyEntity> redisTemplate = new RedisTemplate<>();
 			redisTemplate.setConnectionFactory(jedisConnectionFactory);
-			final ObjectMapper mapper = new ObjectMapper();
-			mapper.setVisibility(PropertyAccessor.FIELD, Visibility.ANY);
-			mapper.setVisibility(PropertyAccessor.GETTER, Visibility.NONE);
-			mapper.setVisibility(PropertyAccessor.IS_GETTER, Visibility.NONE);
-			mapper.enableDefaultTyping(DefaultTyping.NON_FINAL, As.PROPERTY);
-			mapper.registerModule(new JodaModule());
-			redisTemplate.setKeySerializer(new StringRedisSerializer());
-			redisTemplate.setHashKeySerializer(new GenericJackson2JsonRedisSerializer());
-			redisTemplate.setHashValueSerializer(customRedisSerializer);
+			redisTemplate.setKeySerializer(keySerializer);
+			redisTemplate.setValueSerializer(customRedisSerializer);
 			return redisTemplate;
 		}
 	}
@@ -64,23 +57,25 @@ public class CompositeKeyEntityCache {
 	private CompositeKeyEntityService compositeKeyEntityService;
 
 	@Autowired
-	private RedisTemplate<String, Map<DoubleKey, CompositeKeyEntity>> compositeKeyEntityRedisTemplate;
-
-	private HashOperations<String, DoubleKey, CompositeKeyEntity> opsForHash;
+	public ValueOperations<DoubleKey, CompositeKeyEntity> compositeKeyEntityValueOperations;
 
 	@LogTime
 	public CompositeKeyEntity get(DoubleKey key) {
-		return opsForHash.get(COMPOSITE_KEY_ENTITIES, key);
+		return compositeKeyEntityValueOperations.get(key);
 	}
 
 	@LogTime
-	public List<CompositeKeyEntity> getAllFromCache() {
-		return opsForHash.values(COMPOSITE_KEY_ENTITIES);
+	public List<CompositeKeyEntity> getWithMultiGet(List<DoubleKey> randomDoubleKeys) {
+		final List<CompositeKeyEntity> compositeKeyEntities = new ArrayList<>(randomDoubleKeys.size());
+		for (final DoubleKey doubleKey : randomDoubleKeys) {
+			compositeKeyEntities.add(compositeKeyEntityValueOperations.get(doubleKey));
+		}
+		return compositeKeyEntities;
 	}
 
-	@PostConstruct
-	public void init() {
-		opsForHash = compositeKeyEntityRedisTemplate.opsForHash();
+	@LogTime
+	public List<CompositeKeyEntity> getWithOneGet(List<DoubleKey> randomDoubleKeys) {
+		return compositeKeyEntityValueOperations.multiGet(randomDoubleKeys);
 	}
 
 	@LogTime
@@ -88,7 +83,7 @@ public class CompositeKeyEntityCache {
 		final Map<DoubleKey, CompositeKeyEntity> compositeEntityMap = compositeKeyEntityService
 				.getCompositeKeyEntities().stream().collect(
 						Collectors.toMap(c -> new DoubleKey(c.getFirstCode(), c.getSecondCode()), Function.identity()));
-		opsForHash.putAll(COMPOSITE_KEY_ENTITIES, compositeEntityMap);
+		compositeKeyEntityValueOperations.multiSet(compositeEntityMap);
 	}
 
 }

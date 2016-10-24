@@ -21,4 +21,9 @@ public class HierarchyValueRestImpl {
 		return service.getByIdFromCache(id);
 	}
 
+	@RequestMapping(method = RequestMethod.GET, value = "/multi/{number}")
+	public void getMilti(@PathVariable("number") Long number) {
+		service.testMulti(number);
+	}
+
 }

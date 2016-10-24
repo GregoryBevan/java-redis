@@ -22,7 +22,7 @@ public class HierarchyValueCacheTest {
 
 	@Test
 	public void test_get() {
-		final HierarchyValue hierarchyValue = cache.getById(10254L);
+		final HierarchyValue hierarchyValue = cache.get(10254L);
 		assertNotNull(hierarchyValue);
 	}
 

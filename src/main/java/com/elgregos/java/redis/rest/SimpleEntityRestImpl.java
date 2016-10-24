@@ -18,9 +18,9 @@ public class SimpleEntityRestImpl {
 	@Autowired
 	private SimpleEntityService service;
 
-	@RequestMapping(method = RequestMethod.GET, value = "/{code}")
-	public SimpleEntity get(@PathVariable("code") String code) {
-		return service.loadFromCache(code);
+	@RequestMapping(method = RequestMethod.GET, value = "/{id}")
+	public SimpleEntity get(@PathVariable("id") Long id) {
+		return service.loadFromCache(id);
 	}
 
 	@RequestMapping(method = RequestMethod.GET)
@@ -28,9 +28,9 @@ public class SimpleEntityRestImpl {
 		return service.getSimpleEntities();
 	}
 
-	@RequestMapping(method = RequestMethod.GET, path = "/all")
-	public List<SimpleEntity> getAllFromCache() {
-		return service.getAllFromCache();
+	@RequestMapping(method = RequestMethod.GET, value = "/multi/{number}")
+	public void getMilti(@PathVariable("number") Long number) {
+		service.testMulti(number);
 	}
 
 }

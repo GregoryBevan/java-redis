@@ -1,31 +1,24 @@
 package com.elgregos.java.redis.cache;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import javax.annotation.PostConstruct;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
-import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.serializer.StringRedisSerializer;
+import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Component;
 
 import com.elgregos.java.redis.aspect.LogTime;
-import com.elgregos.java.redis.conf.CustomRedisSerializer;
+import com.elgregos.java.redis.cache.serializer.SimpleEntityKeySerialier;
+import com.elgregos.java.redis.cache.serializer.ValueSerializer;
 import com.elgregos.java.redis.entities.SimpleEntity;
 import com.elgregos.java.redis.service.SimpleEntityService;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonTypeInfo.As;
-import com.fasterxml.jackson.annotation.PropertyAccessor;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectMapper.DefaultTyping;
-import com.fasterxml.jackson.datatype.joda.JodaModule;
 
 @Component
 public class SimpleEntityCache {
@@ -37,54 +30,55 @@ public class SimpleEntityCache {
 		private RedisConnectionFactory jedisConnectionFactory;
 
 		@Autowired
-		private CustomRedisSerializer customRedisSerializer;
+		private ValueSerializer valueSerializer;
+
+		@Autowired
+		private SimpleEntityKeySerialier keySerializer;
 
 		@Bean
-		RedisTemplate<String, Map<String, SimpleEntity>> simpleEntityRedisTemplate() {
-			final RedisTemplate<String, Map<String, SimpleEntity>> redisTemplate = new RedisTemplate<>();
+		public ValueOperations<Long, SimpleEntity> simpleEntityValueOperations() {
+			return simpleEntityRedisTemplate().opsForValue();
+		}
+
+		@Bean
+		RedisTemplate<Long, SimpleEntity> simpleEntityRedisTemplate() {
+			final RedisTemplate<Long, SimpleEntity> redisTemplate = new RedisTemplate<>();
 			redisTemplate.setConnectionFactory(jedisConnectionFactory);
-			final ObjectMapper mapper = new ObjectMapper();
-			mapper.setVisibility(PropertyAccessor.FIELD, Visibility.ANY);
-			mapper.setVisibility(PropertyAccessor.GETTER, Visibility.NONE);
-			mapper.setVisibility(PropertyAccessor.IS_GETTER, Visibility.NONE);
-			mapper.enableDefaultTyping(DefaultTyping.NON_FINAL, As.PROPERTY);
-			mapper.registerModule(new JodaModule());
-			redisTemplate.setKeySerializer(new StringRedisSerializer());
-			redisTemplate.setHashKeySerializer(new StringRedisSerializer());
-			redisTemplate.setHashValueSerializer(customRedisSerializer);
+			redisTemplate.setKeySerializer(keySerializer);
+			redisTemplate.setValueSerializer(valueSerializer);
 			return redisTemplate;
 		}
 	}
-
-	public static final String SIMPLE_ENTITIES = "simple-entities";
 
 	@Autowired
 	private SimpleEntityService simpleEntityService;
 
 	@Autowired
-	private RedisTemplate<String, Map<String, SimpleEntity>> simpleEntityRedisTemplate;
-
-	private HashOperations<String, String, SimpleEntity> opsForHash;
+	private ValueOperations<Long, SimpleEntity> simpleEntityValueOperations;
 
 	@LogTime
-	public SimpleEntity get(String code) {
-		return opsForHash.get(SIMPLE_ENTITIES, code);
+	public SimpleEntity get(Long id) {
+		return simpleEntityValueOperations.get(id);
 	}
 
 	@LogTime
-	public List<SimpleEntity> getAllFromCache() {
-		return opsForHash.values(SIMPLE_ENTITIES);
+	public List<SimpleEntity> getWithMultiGet(List<Long> randomIds) {
+		final List<SimpleEntity> simpleEntities = new ArrayList<>(randomIds.size());
+		for (final Long id : randomIds) {
+			simpleEntities.add(simpleEntityValueOperations.get(id));
+		}
+		return simpleEntities;
 	}
 
-	@PostConstruct
-	public void init() {
-		opsForHash = simpleEntityRedisTemplate.opsForHash();
+	@LogTime
+	public List<SimpleEntity> getWithOneGet(List<Long> randomIds) {
+		return simpleEntityValueOperations.multiGet(randomIds);
 	}
 
 	@LogTime
 	public void loadCache() {
-		final Map<String, SimpleEntity> simpleEntitiesMap = simpleEntityService.getSimpleEntities().stream()
-				.collect(Collectors.toMap(SimpleEntity::getCode, Function.identity()));
-		opsForHash.putAll(SIMPLE_ENTITIES, simpleEntitiesMap);
+		final Map<Long, SimpleEntity> simpleEntitiesMap = simpleEntityService.getSimpleEntities().stream()
+				.collect(Collectors.toMap(SimpleEntity::getId, Function.identity()));
+		simpleEntityValueOperations.multiSet(simpleEntitiesMap);
 	}
 }

@@ -11,11 +11,6 @@ import redis.clients.jedis.JedisPoolConfig;
 public class CacheConfiguration {
 
 	@Bean
-	public CustomRedisSerializer customRedisSerializer() {
-		return new CustomRedisSerializer();
-	}
-
-	@Bean
 	public RedisConnectionFactory jedisConnectionFactory() {
 
 		final JedisConnectionFactory factory = new JedisConnectionFactory();

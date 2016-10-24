@@ -1,5 +1,6 @@
 package com.elgregos.java.redis.cache;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
@@ -11,20 +12,14 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
-import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.stereotype.Component;
 
 import com.elgregos.java.redis.aspect.LogTime;
-import com.elgregos.java.redis.conf.CustomRedisSerializer;
+import com.elgregos.java.redis.cache.serializer.HierarchyValueKeySerialier;
+import com.elgregos.java.redis.cache.serializer.ValueSerializer;
 import com.elgregos.java.redis.entities.hierarchy.HierarchyValue;
 import com.elgregos.java.redis.service.HierarchyService;
 import com.elgregos.java.redis.service.HierarchyValueService;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonTypeInfo.As;
-import com.fasterxml.jackson.annotation.PropertyAccessor;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectMapper.DefaultTyping;
-import com.fasterxml.jackson.datatype.joda.JodaModule;
 
 @Component
 public class HierarchyValueCache {
@@ -36,30 +31,25 @@ public class HierarchyValueCache {
 		private RedisConnectionFactory jedisConnectionFactory;
 
 		@Autowired
-		private CustomRedisSerializer customRedisSerializer;
+		private HierarchyValueKeySerialier hierarchyValueKeySerialier;
+
+		@Autowired
+		private ValueSerializer valueSerializer;
 
 		@Bean
-		ValueOperations<String, HierarchyValue> hierarchyValueCacheOperations() {
+		ValueOperations<Long, HierarchyValue> hierarchyValueCacheOperations() {
 			return otherHierarchyValueRedisTemplate().opsForValue();
 		}
 
 		@Bean
-		RedisTemplate<String, HierarchyValue> otherHierarchyValueRedisTemplate() {
-			final RedisTemplate<String, HierarchyValue> redisTemplate = new RedisTemplate<>();
+		RedisTemplate<Long, HierarchyValue> otherHierarchyValueRedisTemplate() {
+			final RedisTemplate<Long, HierarchyValue> redisTemplate = new RedisTemplate<>();
 			redisTemplate.setConnectionFactory(jedisConnectionFactory);
-			final ObjectMapper mapper = new ObjectMapper();
-			mapper.setVisibility(PropertyAccessor.FIELD, Visibility.ANY);
-			mapper.setVisibility(PropertyAccessor.GETTER, Visibility.NONE);
-			mapper.setVisibility(PropertyAccessor.IS_GETTER, Visibility.NONE);
-			mapper.enableDefaultTyping(DefaultTyping.NON_FINAL, As.PROPERTY);
-			mapper.registerModule(new JodaModule());
-			redisTemplate.setKeySerializer(new StringRedisSerializer());
-			redisTemplate.setValueSerializer(customRedisSerializer);
+			redisTemplate.setKeySerializer(hierarchyValueKeySerialier);
+			redisTemplate.setValueSerializer(valueSerializer);
 			return redisTemplate;
 		}
 	}
-
-	private static final String KEY_PREFIX = "ohv_";
 
 	@Autowired
 	private HierarchyService hierarchyService;
@@ -68,11 +58,25 @@ public class HierarchyValueCache {
 	private HierarchyValueService hierarchyValueService;
 
 	@Autowired
-	private ValueOperations<String, HierarchyValue> hierarchyValueCacheOperations;
+	private ValueOperations<Long, HierarchyValue> hierarchyValueCacheOperations;
 
 	@LogTime
-	public HierarchyValue getById(Long id) {
-		return hierarchyValueCacheOperations.get(KEY_PREFIX.concat(id.toString()));
+	public HierarchyValue get(Long id) {
+		return hierarchyValueCacheOperations.get(id);
+	}
+
+	@LogTime
+	public List<HierarchyValue> getWithMultiGet(List<Long> randomIds) {
+		final List<HierarchyValue> hierarchyValues = new ArrayList<>(randomIds.size());
+		for (final Long id : randomIds) {
+			hierarchyValues.add(hierarchyValueCacheOperations.get(id));
+		}
+		return hierarchyValues;
+	}
+
+	@LogTime
+	public List<HierarchyValue> getWithOneGet(List<Long> randomIds) {
+		return hierarchyValueCacheOperations.multiGet(randomIds);
 	}
 
 	@LogTime
@@ -82,8 +86,8 @@ public class HierarchyValueCache {
 
 	public void loadCache(String hierarchyCode) {
 		final List<HierarchyValue> hierarchyValues = hierarchyValueService.findByHierarchyCode(hierarchyCode);
-		final Map<String, HierarchyValue> map = hierarchyValues.stream()
-				.collect(Collectors.toMap(h -> KEY_PREFIX.concat(h.getId().toString()), Function.identity()));
+		final Map<Long, HierarchyValue> map = hierarchyValues.stream()
+				.collect(Collectors.toMap(HierarchyValue::getId, Function.identity()));
 
 		hierarchyValueCacheOperations.multiSet(map);
 	}
