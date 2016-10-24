@@ -2,7 +2,6 @@ package com.elgregos.java.redis.service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,17 +30,16 @@ public class HierarchyValueService {
 	}
 
 	public void testMulti(Long number) {
-		final List<Long> randomIds = getRandomIds(number);
+		final List<Long> randomIds = getIds(number);
 		final List<HierarchyValue> withOneGet = cache.getWithOneGet(randomIds);
 		final List<HierarchyValue> withMultiGet = cache.getWithMultiGet(randomIds);
 		System.out.println("Sizes : " + withOneGet.size() + " & " + withMultiGet.size());
 	}
 
-	private List<Long> getRandomIds(Long number) {
-		final Random randomObj = new Random();
+	private List<Long> getIds(Long number) {
 		final List<Long> ids = new ArrayList<>();
-		for (int i = 0; i < number; i++) {
-			ids.add(randomObj.longs(360003, 539910).findFirst().getAsLong());
+		for (int i = 360003, max = number.intValue() + 360003; i <= max && i <= 539910; i++) {
+			ids.add(Long.valueOf(i));
 		}
 		return ids;
 	}

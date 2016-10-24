@@ -2,7 +2,6 @@ package com.elgregos.java.redis.service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,23 +31,25 @@ public class CompositeKeyEntityService {
 	}
 
 	public void testMulti(Long number) {
-		final List<DoubleKey> randomDoubleKeys = getRandomDoubleKeys(number);
+		final List<DoubleKey> randomDoubleKeys = getDoubleKeys(number);
 		final List<CompositeKeyEntity> withOneGet = cache.getWithOneGet(randomDoubleKeys);
 		final List<CompositeKeyEntity> withMultiGet = cache.getWithMultiGet(randomDoubleKeys);
 		System.out.println("Sizes : " + withOneGet.size() + " & " + withMultiGet.size());
 
 	}
 
-	private List<DoubleKey> getRandomDoubleKeys(Long number) {
-		final Random randomObj = new Random();
+	private List<DoubleKey> getDoubleKeys(Long number) {
 		final List<DoubleKey> doubleKeys = new ArrayList<>();
-		long count = 0;
-		while (count < number) {
-			final String firstCode = String.valueOf((char) randomObj.ints('A', 'Z').findFirst().getAsInt());
-			final String secondCode = String.valueOf(randomObj.longs(1, 10000).findFirst().getAsLong());
-			final DoubleKey doubleKey = new DoubleKey(firstCode, secondCode);
-			doubleKeys.add(doubleKey);
-			count++;
+		char currentFirstCode = 'A';
+		int currentSecondCode = 0;
+		for (int i = 1; i <= number; i++) {
+			doubleKeys.add(new DoubleKey(String.valueOf(currentFirstCode), String.valueOf(currentSecondCode)));
+			if (currentSecondCode == 9999) {
+				currentFirstCode = (char) (currentFirstCode + 1);
+				currentSecondCode = 0;
+				continue;
+			}
+			currentSecondCode += 1;
 		}
 		return doubleKeys;
 	}
