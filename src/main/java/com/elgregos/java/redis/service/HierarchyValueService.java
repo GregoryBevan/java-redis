@@ -1,9 +1,12 @@
 package com.elgregos.java.redis.service;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.elgregos.java.redis.aspect.LogTime;
@@ -37,10 +40,8 @@ public class HierarchyValueService {
 	}
 
 	private List<Long> getIds(Long number) {
-		final List<Long> ids = new ArrayList<>();
-		for (int i = 360003, max = number.intValue() + 360003; i <= max && i <= 539910; i++) {
-			ids.add(Long.valueOf(i));
-		}
-		return ids;
+		final Pageable limit = new PageRequest(0, number.intValue());
+		return StreamSupport.stream(hierarchyValueRepository.findAll(limit).spliterator(), false)
+				.map(HierarchyValue::getId).collect(Collectors.toList());
 	}
 }
