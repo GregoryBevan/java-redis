@@ -51,8 +51,6 @@ public class CompositeKeyEntityCache {
 		}
 	}
 
-	public static final String COMPOSITE_KEY_ENTITIES = "composite-key-entities";
-
 	@Autowired
 	private CompositeKeyEntityService compositeKeyEntityService;
 
