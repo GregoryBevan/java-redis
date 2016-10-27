@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class HierarchyValueKeySerialier implements RedisSerializer<Long> {
 
-	private final String KEY_PREFIX = "ovh_";
+	private final String KEY_PREFIX = "hv_";
 
 	@Override
 	public Long deserialize(byte[] bytes) throws SerializationException {
